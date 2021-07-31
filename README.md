@@ -145,6 +145,7 @@
 * Add sendEmail function on conditional notification function with two params (`status`,`orderId`)
 
   ```javascript
+  ...
   if (transactionStatus == "capture") {
     if (fraudStatus == "challenge") {
       // TODO set transaction status on your database to 'challenge'
@@ -184,4 +185,5 @@
     handleTransaction("pending", orderId);
     res.status(200);
   }
+  ...
   ```
