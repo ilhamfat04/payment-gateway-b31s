@@ -174,13 +174,13 @@ exports.notification = async (req, res) => {
       if (fraudStatus == "challenge") {
         // TODO set transaction status on your database to 'challenge'
         // and response with 200 OK
-        sendEmail("pending", orderId);
+        sendEmail("pending", orderId); //sendEmail with status pending and order id
         handleTransaction("pending", orderId);
         res.status(200);
       } else if (fraudStatus == "accept") {
         // TODO set transaction status on your database to 'success'
         // and response with 200 OK
-        sendEmail("success", orderId);
+        sendEmail("success", orderId); //sendEmail with status success and order id
         updateProduct(orderId);
         handleTransaction("success", orderId);
         res.status(200);
@@ -188,7 +188,7 @@ exports.notification = async (req, res) => {
     } else if (transactionStatus == "settlement") {
       // TODO set transaction status on your database to 'success'
       // and response with 200 OK
-      sendEmail("success", orderId);
+      sendEmail("success", orderId); //sendEmail with status success and order id
       updateProduct(orderId);
       handleTransaction("success", orderId);
       res.status(200);
@@ -199,13 +199,13 @@ exports.notification = async (req, res) => {
     ) {
       // TODO set transaction status on your database to 'failure'
       // and response with 200 OK
-      sendEmail("failed", orderId);
+      sendEmail("failed", orderId); //sendEmail with status failed and order id
       handleTransaction("failed", orderId);
       res.status(200);
     } else if (transactionStatus == "pending") {
       // TODO set transaction status on your database to 'pending' / waiting payment
       // and response with 200 OK
-      sendEmail("pending", orderId);
+      sendEmail("pending", orderId); //sendEmail with status pending and order id
       handleTransaction("pending", orderId);
       res.status(200);
     }
