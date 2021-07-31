@@ -21,7 +21,6 @@ const {
   getTransactions,
   addTransaction,
   notification,
-  findUser,
 } = require("../controllers/transaction");
 const {
   getCategories,
@@ -66,7 +65,5 @@ router.delete("/category/:id", deleteCategory);
 router.post("/register", register);
 router.post("/login", login);
 router.get("/check-auth", auth, checkAuth);
-
-router.post("/find-user", findUser);
 
 module.exports = router;
