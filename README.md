@@ -31,7 +31,7 @@
 
     ![alt img](./account.png)
 
-  - Go to google account page
+  - Click `Keamanan` and `Nonaktifkan akses`
 
     ![alt img](./security.png)
 
@@ -141,3 +141,5 @@
     }
   };
   ```
+
+* Add sendEmail function on notification function with two params (`status`,`orderId`)
