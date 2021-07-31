@@ -39,7 +39,7 @@
 
     ![alt img](./accept.png)
 
-## Server side
+## Handle send email on backend
 
 > File : `server/src/controller/transaction.js`
 
